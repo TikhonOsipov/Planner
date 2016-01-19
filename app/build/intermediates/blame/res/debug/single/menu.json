@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/menu_fragment_incomes.xml",
+        "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/menu_fragment_incomes.xml"
+    },
+    {
+        "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/menu_fragment_costs.xml",
+        "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/menu_fragment_costs.xml"
+    }
+]
