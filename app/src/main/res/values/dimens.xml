@@ -8,6 +8,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="costs_item_height">72dp</dimen>
+    <dimen name="savings_item_height">72dp</dimen>
 
     <dimen name="fragment_main_tv_large_text_size">40sp</dimen>
     <dimen name="fragment_main_tv_remaining_text_size">60sp</dimen>

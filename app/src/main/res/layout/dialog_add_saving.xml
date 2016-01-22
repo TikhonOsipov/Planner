@@ -14,7 +14,7 @@
         app:hintTextAppearance="@android:style/TextAppearance.Small">
 
         <EditText
-            android:id="@+id/costName"
+            android:id="@+id/savingName"
             android:inputType="textCapSentences"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:hintTextAppearance="@android:style/TextAppearance.Small">
 
         <EditText
-            android:id="@+id/costValue"
+            android:id="@+id/savingValue"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

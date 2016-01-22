@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import com.tixon.planner.fragments.FragmentCosts;
 import com.tixon.planner.fragments.FragmentIncomes;
 import com.tixon.planner.fragments.FragmentMain;
+import com.tixon.planner.fragments.FragmentSavings;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //установить по умолчанию главный фрагмент при запуске
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.container, FragmentMain.newInstance()).commit();
         navigationView.setCheckedItem(R.id.nav_total);
     }
 
@@ -91,13 +95,15 @@ public class MainActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.container, FragmentCosts.newInstance()).commit();
         } else if (id == R.id.nav_incomes) {
             fm.beginTransaction().replace(R.id.container, FragmentIncomes.newInstance()).commit();
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.nav_savings) {
+            fm.beginTransaction().replace(R.id.container, FragmentSavings.newInstance()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
+
+        //fm.popBackStack();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

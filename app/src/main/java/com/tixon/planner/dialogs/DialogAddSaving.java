@@ -11,54 +11,53 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 
-import com.tixon.planner.Cost;
-import com.tixon.planner.Income;
 import com.tixon.planner.R;
+import com.tixon.planner.Saving;
 
 /**
- * Created by tikhon on 19/01/16.
+ * Created by tikhon on 22/01/16.
  */
-public class DialogAddIncome extends DialogFragment {
+public class DialogAddSaving extends DialogFragment {
 
-    public interface OnIncomeAddedListener {
-        void onIncomeAdded(Income income);
+    public interface OnSavingAddedListener {
+        void onSavingAdded(Saving saving);
     }
 
-    private OnIncomeAddedListener onIncomeAddedListener;
+    private OnSavingAddedListener onSavingAddedListener;
 
-    public void setOnIncomeAddedListener(OnIncomeAddedListener listener) {
-        this.onIncomeAddedListener = listener;
+    public void setOnSavingAddedListener(OnSavingAddedListener listener) {
+        this.onSavingAddedListener = listener;
     }
 
-    public static final String TAG_ADD_INCOME_DIALOG = "add_income_dialog";
+    private static final String TAG_ADD_SAVING_DIALOG = "add_saving_dialog";
 
-    public DialogAddIncome() {}
+    public DialogAddSaving() {}
 
-    public static DialogAddIncome newInstance() {
-        DialogAddIncome dialog = new DialogAddIncome();
+    public static DialogAddSaving newInstance() {
+        DialogAddSaving dialog = new DialogAddSaving();
         Bundle args = new Bundle();
         dialog.setArguments(args);
         return dialog;
     }
 
     public void showDialog(Fragment fragment) {
-        this.show(fragment.getChildFragmentManager().beginTransaction(), TAG_ADD_INCOME_DIALOG);
+        this.show(fragment.getChildFragmentManager().beginTransaction(), TAG_ADD_SAVING_DIALOG);
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View v = inflater.inflate(R.layout.dialog_add_income, null);
+        View v = inflater.inflate(R.layout.dialog_add_saving, null);
 
-        final EditText etName = (EditText) v.findViewById(R.id.incomeName);
-        final EditText etValue = (EditText) v.findViewById(R.id.incomeValue);
+        final EditText etName = (EditText) v.findViewById(R.id.savingName);
+        final EditText etValue = (EditText) v.findViewById(R.id.savingValue);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                .setTitle("Новый доход")
+                .setTitle("Новое сбережение")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        onIncomeAddedListener.onIncomeAdded(new Income(etName.getText().toString(),
+                        onSavingAddedListener.onSavingAdded(new Saving(etName.getText().toString(),
                                 Double.parseDouble(etValue.getText().toString()), System.currentTimeMillis()));
                     }
                 })

@@ -4,12 +4,17 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
+
     <string name="dialog_cost_hint_name">Название</string>
     <string name="dialog_cost_hint_value">Значение</string>
     <string name="fragment_main_incomes">Доходы</string>
     <string name="fragment_main_costs">Расходы</string>
+    <string name="fragment_main_savings">Сбережения</string>
+
     <string name="fragment_main_remaining_amount">Оставшаяся сумма</string>
+
     <string name="menu_delete_incomes">Удалить доходы</string>
     <string name="menu_delete_costs">Удалить расходы</string>
+    <string name="menu_delete_savings">Удалить сбережения</string>
 </resources>

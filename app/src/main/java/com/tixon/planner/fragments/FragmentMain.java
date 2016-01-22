@@ -20,9 +20,9 @@ public class FragmentMain extends Fragment {
     SQLiteDatabase db;
     DatabaseHelper helper;
 
-    TextView tvCosts, tvIncomes, tvRemainingAmount;
+    TextView tvCosts, tvIncomes, tvSavings, tvRemainingAmount;
 
-    double costs, incomes, remainingAmount = 0;
+    double costs, incomes, savings, remainingAmount = 0;
 
     public FragmentMain() {}
 
@@ -46,14 +46,17 @@ public class FragmentMain extends Fragment {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
         tvCosts = (TextView) v.findViewById(R.id.tvFragmentMainCosts);
         tvIncomes = (TextView) v.findViewById(R.id.tvFragmentMainIncomes);
+        tvSavings = (TextView) v.findViewById(R.id.tvFragmentMainSavings);
         tvRemainingAmount = (TextView) v.findViewById(R.id.tvFragmentMainRemaining);
 
         costs = helper.getCostsTotalValue(db);
         incomes = helper.getIncomesTotalValue(db);
-        remainingAmount = incomes - costs;
+        savings = helper.getSavingsTotalValue(db);
+        remainingAmount = incomes - costs - savings;
 
         tvCosts.setText(String.valueOf(costs));
         tvIncomes.setText(String.valueOf(incomes));
+        tvSavings.setText(String.valueOf(savings));
         tvRemainingAmount.setText(String.valueOf(remainingAmount));
         return v;
     }

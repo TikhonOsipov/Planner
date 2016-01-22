@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/menu_fragment_savings.xml",
+        "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/menu_fragment_savings.xml"
+    },
+    {
         "merged": "/Users/tikhon/AndroidStudioProjects/Planner/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/Users/tikhon/AndroidStudioProjects/Planner/app/src/main/res/menu/main.xml"
     },
